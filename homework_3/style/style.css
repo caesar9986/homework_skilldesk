@@ -1,0 +1,217 @@
+* {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------header------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 312px;
+  width: 1296px;
+}
+
+.box_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+  padding-left: 958px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* -------------main------------- */
+main {
+  width: 1920px;
+  height: 700px;
+  background-color: #4FBFA5;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 100px;
+  width: 1295px;
+}
+.links a {
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+}
+.links a:last-child {
+  width: 194px;
+  height: 42px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px 51px 11px 51px;
+  margin-top: 23px;
+}
+
+.first-screen {
+  display: flex;
+  margin: 45px 309px 57px 316px;
+  color: white;
+}
+.first-screen h2 {
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.first-screen p {
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.first-screen button {
+  width: 158px;
+  height: 50px;
+  background-color: #00868A;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+}
+.first-screen__desc {
+  width: 416px;
+  height: 266px;
+  color: white;
+  margin: 133px 133px 134px 0;
+}
+.first-screen__desc h1 {
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.first-screen__desc p {
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  margin-top: 20px;
+}
+.first-screen__desc button {
+  width: 158px;
+  height: 50px;
+  background-color: #00868A;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  margin-top: 40px;
+}
+
+/* ------------section------------ */
+section {
+  margin: 146px 309px 148px 312px;
+}
+section h2 {
+  text-align: center;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #00868A;
+}
+section .offers {
+  display: flex;
+  gap: 24px;
+  margin-top: 60px;
+}
+section .offers__item {
+  width: 306px;
+  height: 343px;
+  background-color: #00868A;
+}
+section .offers__item img {
+  width: 306px;
+  height: 230px;
+}
+section .offers__item_frame {
+  display: flex;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: white;
+}
+section .offers__item_frame p {
+  margin: 25px 15px 25px 30px;
+}
+section .offers__item_frame button {
+  width: 50px;
+  height: 40px;
+  border: 1px solid white;
+  background-color: transparent;
+  margin: 37px 30px 37px 15px;
+}
+section .offers__item_frame img {
+  width: 20px;
+  height: 10px;
+}
+section .offers__item_sticker {
+  width: 70px;
+  height: 40px;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  padding: 9px 15px 10px 15px;
+  background-color: #4FBFA5;
+  margin-right: 236px;
+  position: relative;
+  top: -313px;
+  left: 30px;
+}
+
+/* ------------footer------------ */
+footer {
+  width: 1295px;
+  height: 91px;
+  margin: 0 313px 31px 312px;
+}
+footer .box_icons {
+  align-items: center;
+  justify-content: right;
+}/*# sourceMappingURL=style.css.map */
