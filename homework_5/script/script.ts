@@ -1,3 +1,10 @@
+// Задача: Опишите интерфейс Product, добавьте:
+// readonly id: number
+// name: string
+// price: number
+// необязательное поле category?: string
+// Типизируйте массив rawProducts как Product[].
+
 const rawProducts: Product [] = [
   { id: 1, name: "Laptop", price: 1200 },
   { id: 2, name: "Phone", price: 800 },
@@ -10,6 +17,8 @@ interface Product {
     price: number,
     category?: string
 }
+
+// Напишите функцию getExpensiveProducts(products: Product[], minPrice: number): Product[], которая возвращает товары дороже заданной цены.
 
 let minPrice = 1000;
 
@@ -24,6 +33,8 @@ function getExpensiveProducts (rawProducts: Product[], minPrice: number): Produc
     return result
 }
 
+// Напишите функцию applyDiscount(products: Product[], discount: number): Product[], которая возвращает новый массив товаров с уменьшенной ценой.
+
 let discount = 10;
 
 function applyDiscount (rawProducts: Product[], discount: number): Product[] {
@@ -36,30 +47,33 @@ function applyDiscount (rawProducts: Product[], discount: number): Product[] {
     return result
 }
 
+// Напишите функцию groupByCategory(products: Product[]): Record, которая группирует товары по category. Если category не задана, класть их в группу "uncategorized".
 
+function groupByCategory(rawProducts: Product[]): Record<string, Product[]> {
+    const result: Record<string, Product[]> = {};
 
-function groupByCategory (rawProducts: Product[]): Record {
-    const category: Product[] = [];
-    const uncategorized: Product[] = [];
     for (let i = 0; i < rawProducts.length; i++) {
-        if (rawProducts[i].category === undefined) {
-            uncategorized.push(rawProducts[i])
-        } else {
-            category.push(rawProducts[i]);
-        }
+        const product = rawProducts[i];
+        const category = product.category || "uncategorized";
+
+    if (!result[category]) {
+        result[category] = [];
     }
-    return
+
+    result[category].push(product);
 }
 
-function printProduct (rawProducts: Product[]): string {
-    const idProducts: number = 1
-    let result: Product[]
-    for (let i = 0; i < rawProducts.length; i++) {
-        if (idProducts === rawProducts[i].id) {
-            console.log(`«Товар ${rawProducts[i].name} (ID: ${rawProducts[i].id}) стоит $${rawProducts[i].price}»`);
-        }
-    }
-    return
+return result;
 }
 
-// Посдение две задачи, я к сожалению не смог решить, не пойму в чем дело, в функции groupByCategory не понимаю как работает тип данных Record, а в последней, скорее всего надо через переменную result, но я не понимаю как ее применить
+// Попробуйте написать функцию printProduct(product: Product): string, которая вернёт строку вроде: «Товар Laptop (ID: 1) стоит $1200».
+
+function printProduct(id: number): string | undefined {
+  const product = rawProducts.find(function (p) {
+    return p.id === id;
+  });
+  if (product) {
+    return "Товар " + product.name + " (ID: " + product.id + ") стоит $" + product.price;
+  }
+  return undefined;
+}
