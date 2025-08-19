@@ -41,10 +41,11 @@ emailInputForm.addEventListener("input", function (inputEvent) {
     emailInputForm.classList.remove("valid");
     emailInputForm.classList.remove("invalid");
   }
-  dataForm.addEventListener("input", function (submitEvent) {
+  
+});
+dataForm.addEventListener("submit", function (submitEvent) {
     submitEvent.preventDefault();
     submitInputForm.addEventListener("click", function () {
       console.log("Email отправлен")
     })
   })
-});
