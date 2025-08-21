@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.basket {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 900px;
+  margin: 10px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 500px 400px;
+  align-items: center;
+}
+
+.basket_product {
+  width: 330px;
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  justify-self: center;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.basket-product-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.basket-button-remove-basket {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.basket_product_remove_box {
+  display: grid;
+  grid-template-columns: 30px;
+  justify-self: right;
+}
+
+.button-remove-basket {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  width: 900px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 15%;
+  object-fit: cover;
+}
+
+.container button {
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .basket {
+    width: 500px;
+    grid-template-columns: 350px 150px;
+  }
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .basket {
+    width: 350px;
+    grid-template-columns: 350px;
+  }
+  .button-remove-basket {
+    justify-self: center;
+  }
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 350px;
+  }
+}
